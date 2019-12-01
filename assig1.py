@@ -32,20 +32,18 @@ def sentence():
     print("Number of Sentence:",save)
 
 def word():
-    #save = 0
+    save = 0
     infile = open('Loop.txt','r')
     read = infile.read()
     infile.close()
-    read1 = read.split()
-    #for i in read:
-       # if i ==" ":
-           # save += 1
-       # else:
-            #pass
-    print("Number of Word:",len(read1))
+    for i in read:
+        if i ==" ":
+            save += 1
+        else:
+            pass
+    print("Number of Word:",save)
 
 def ABC():
-    #ABCD =['a','b','c','d','e','f','g','h','i','j','k','l','n','m','o','p','q','r','s','t','u','v','w','x','y','z']
     save = 0
     infile = open('Loop.txt','r')
     read = infile.read()
@@ -53,8 +51,6 @@ def ABC():
     for i in read:
         if i.isalpha() == True:
             save += 1
-        #else:
-            #pass
     print("Number of Character:",save)
 
 def big_letter():
