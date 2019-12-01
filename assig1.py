@@ -18,6 +18,7 @@ def line():
         else:
             pass
     print("Number of line:",save)
+    
 def sentence():
     save = 0
     infile = open('Loop.txt','r')
@@ -31,16 +32,17 @@ def sentence():
     print("Number of Sentence:",save)
 
 def word():
-    save = 0
+    #save = 0
     infile = open('Loop.txt','r')
     read = infile.read()
     infile.close()
-    for i in read:
-        if i ==" ":
-            save += 1
-        else:
-            pass
-    print("Number of Word:",save)
+    read1 = read.split()
+    #for i in read:
+       # if i ==" ":
+           # save += 1
+       # else:
+            #pass
+    print("Number of Word:",len(read1))
 
 def ABC():
     #ABCD =['a','b','c','d','e','f','g','h','i','j','k','l','n','m','o','p','q','r','s','t','u','v','w','x','y','z']
@@ -49,11 +51,11 @@ def ABC():
     read = infile.read()
     infile.close()
     for i in read:
-        if i.isalpha()== True:
+        if i.isalpha() == True:
             save += 1
-        else:
-            pass
-    print("Number of character:",save)
+        #else:
+            #pass
+    print("Number of Character:",save)
 
 def big_letter():
     save = 0
